@@ -8,6 +8,26 @@ from dotenv import load_dotenv
 import random
 from keep_alive import keep_alive
 keep_alive()
+import discord
+from discord.ext import commands
+import os
+
+from keep_alive import keep_alive
+
+intents = discord.Intents.default()
+intents.message_content = True
+
+bot = commands.Bot(command_prefix="!", intents=intents)
+
+@bot.event
+async def on_ready():
+    print(f'Bot conectado como {bot.user}')
+
+# 👇 isso liga o servidor web (UptimeRobot)
+keep_alive()
+
+# 👇 ISSO LIGA O BOT
+bot.run(os.getenv("DISCORD_BOT_TOKEN"))
 
 print("🚀 Bot iniciando no Railway") 
 
