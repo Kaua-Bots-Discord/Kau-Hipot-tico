@@ -6,6 +6,9 @@ from datetime import datetime, timedelta
 import os
 from dotenv import load_dotenv
 import random
+from keep_alive import keep_alive
+keep_alive()
+
 print("🚀 Bot iniciando no Railway") 
 
 # Carregar variáveis de ambiente
