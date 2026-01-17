@@ -6,7 +6,7 @@ from datetime import datetime, timedelta
 import os
 from dotenv import load_dotenv
 import random
-print("🚀 Bot iniciando no Railway")
+print("🚀 Bot iniciando no Railway") 
 
 # Carregar variáveis de ambiente
 load_dotenv()
